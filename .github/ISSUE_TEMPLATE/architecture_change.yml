@@ -1,0 +1,28 @@
+name: Architecture change
+description: Propose a cross-repository, data, or service-boundary decision
+title: "[Architecture]: "
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and problem
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Proposed decision
+      description: State service boundaries, contracts, and ownership.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and migration
+      description: Include affected repositories, compatibility, rollback, and operational impact.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
