@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible defect in an H-CAM component
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: component
+    attributes:
+      label: Component or service
+      placeholder: hcam-api, hcam-dashboard, hcam-video-engine, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: Provide the smallest reproducible sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Safe evidence
+      description: Include logs or screenshots only after removing secrets, personal data, and video evidence.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
