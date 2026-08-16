@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a product or platform capability
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or operator problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe the expected behaviour, not a specific implementation.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Platform area
+      options:
+        - Experience and UI
+        - API and control plane
+        - Video pipeline
+        - Intelligence and AI
+        - Data platform
+        - Security and compliance
+        - Infrastructure and observability
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable conditions that show the feature is complete.
