@@ -1,0 +1,43 @@
+name: Risk, security, or compliance work
+description: Track a threat, privacy concern, control gap, or compliance obligation
+title: "[Risk]: "
+labels:
+  - "type: risk"
+  - "area: security"
+body:
+  - type: dropdown
+    id: risk_level
+    attributes:
+      label: Risk level
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Risk scenario and affected assets
+      description: Do not include exploit payloads, credentials, personal data, or sensitive evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Existing controls and control gap
+    validations:
+      required: true
+  - type: textarea
+    id: treatment
+    attributes:
+      label: Proposed treatment and acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Safe verification and residual risk
+    validations:
+      required: true

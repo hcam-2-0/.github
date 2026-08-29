@@ -1,0 +1,54 @@
+name: Phase or work-package gate
+description: Review evidence and record an explicit start or acceptance decision
+title: "[Gate]: "
+labels:
+  - "phase-gate"
+  - "authorization-required"
+body:
+  - type: input
+    id: gate_id
+    attributes:
+      label: Gate ID
+      placeholder: D-PX.Y-START or D-PX.Y-ACCEPTANCE
+    validations:
+      required: true
+  - type: dropdown
+    id: gate_type
+    attributes:
+      label: Gate type
+      options:
+        - Planning start
+        - Research start
+        - Implementation start
+        - Artifact review
+        - Work-package acceptance
+        - Phase acceptance
+        - Deployment or external validation
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence package
+      description: Link commits, digests, tests, reports, limitations, and previous decisions.
+    validations:
+      required: true
+  - type: textarea
+    id: authority
+    attributes:
+      label: Requested authority
+      description: State exactly what the decision permits.
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Explicit exclusions
+      description: List everything that remains unauthorized or separately gated.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Accountable-owner decision
+      description: Record identity, decision text, date, and accepted artifact identity. Do not infer acceptance.

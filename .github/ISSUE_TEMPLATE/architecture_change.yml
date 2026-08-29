@@ -1,7 +1,16 @@
 name: Architecture change
 description: Propose a cross-repository, data, or service-boundary decision
 title: "[Architecture]: "
+labels:
+  - "type: decision"
+  - "area: architecture"
 body:
+  - type: input
+    id: decision_id
+    attributes:
+      label: Decision ID
+      description: Use the existing D-* or ADR identifier when one has been assigned.
+      placeholder: D-PX.Y-000 or ADR-000
   - type: textarea
     id: context
     attributes:
@@ -26,3 +35,19 @@ body:
     id: alternatives
     attributes:
       label: Alternatives considered
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Security, privacy, and operational boundaries
+      description: Include authorization, data classes, resource limits, failure modes, and deployment impact.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation and rollback evidence
+      description: State how the decision will be tested, observed, reversed, or superseded.
+    validations:
+      required: true

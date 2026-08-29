@@ -1,6 +1,8 @@
 name: Bug report
 description: Report a reproducible defect in an H-CAM component
 title: "[Bug]: "
+labels:
+  - "type: bug"
 body:
   - type: textarea
     id: summary
@@ -28,6 +30,13 @@ body:
     attributes:
       label: Safe evidence
       description: Include logs or screenshots only after removing secrets, personal data, and video evidence.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and execution profile
+      description: Identify the sanitized OS/runtime and laptop, GPU-lab, server, or Kubernetes profile.
+    validations:
+      required: true
   - type: dropdown
     id: severity
     attributes:

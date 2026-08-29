@@ -1,0 +1,46 @@
+name: Decision record
+description: Record an owner decision, alternatives, scope, and acceptance boundary
+title: "[Decision]: "
+labels:
+  - "type: decision"
+  - "decision-required"
+body:
+  - type: input
+    id: decision_id
+    attributes:
+      label: Decision ID
+      placeholder: D-PX.Y-000
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: State the problem, constraints, and why a decision is required now.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: List viable options, tradeoffs, costs, risks, and the recommendation.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Selected decision
+      description: Leave unselected until the accountable owner records the choice.
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Authority and boundaries
+      description: State exactly what this permits and what remains prohibited or separately gated.
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences, validation, and rollback
+    validations:
+      required: true
