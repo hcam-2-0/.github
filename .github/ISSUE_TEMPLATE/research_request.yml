@@ -1,0 +1,41 @@
+name: Research request
+description: Define bounded technical research before implementation or acquisition
+title: "[Research]: "
+labels:
+  - "type: research"
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: Define the decision or uncertainty this research must resolve.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Allowed sources and evidence
+      description: Prefer primary documentation, specifications, papers, and owned synthetic tests.
+    validations:
+      required: true
+  - type: textarea
+    id: prohibited
+    attributes:
+      label: Prohibited actions
+      description: State download, runtime, camera, data, hardware, network, deployment, and retention boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Required deliverables
+      description: List the comparison, evidence, recommendation, open questions, and acceptance record.
+    validations:
+      required: true
+  - type: textarea
+    id: exit
+    attributes:
+      label: Exit criteria
+      description: State what closes research and which decision or implementation gate follows.
+    validations:
+      required: true

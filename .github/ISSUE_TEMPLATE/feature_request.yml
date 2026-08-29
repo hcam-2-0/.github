@@ -1,6 +1,8 @@
 name: Feature request
 description: Propose a product or platform capability
 title: "[Feature]: "
+labels:
+  - "type: feature"
 body:
   - type: textarea
     id: problem
@@ -28,6 +30,7 @@ body:
         - Data platform
         - Security and compliance
         - Infrastructure and observability
+        - Quality, evidence, and developer experience
     validations:
       required: true
   - type: textarea
@@ -35,3 +38,17 @@ body:
     attributes:
       label: Acceptance criteria
       description: List observable conditions that show the feature is complete.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and resource profiles
+      description: Explain laptop, GPU-lab, server, Kubernetes, fallback, and bypass expectations.
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Security and data boundaries
+      description: State data sources, authorization, retention, external access, and deployment limitations.
+    validations:
+      required: true
